@@ -1,5 +1,5 @@
 /*
-* Copyright (c) 2011-2018 Caveware Digital (https://caveware.digital)
+* Copyright (c) 2018 Caveware Digital (https://caveware.digital)
 *
 * This program is free software; you can redistribute it and/or
 * modify it under the terms of the GNU General Public
@@ -21,6 +21,11 @@
 
 using Gtk;
 
+/**
+ * NukeApp
+ * ---
+ * Entry point for the Nuke microwave cooking time conversion app.
+ */
 public class NukeApp : Gtk.Application {
     public NukeApp () {
         Object (
@@ -30,21 +35,24 @@ public class NukeApp : Gtk.Application {
     }
 
     protected override void activate () {
+        // Create the application window
         var main_window = new Gtk.ApplicationWindow (this);
-        main_window.default_height = 300;
-        main_window.default_width = 300;
+        main_window.border_width = 5;
+        main_window.set_resizable (false);
         main_window.title = "Nuke";
 
+        // Create wattage rows
+        var input = new WattageRow ("Recommended microwave:", 1000);
+        var output = new WattageRow ("Your microwave:", 700);
+
+        // Create a new grid with our wattage rows
         var grid = new Gtk.Grid ();
         grid.orientation = Gtk.Orientation.VERTICAL;
+        grid.set_row_spacing (5);
+        grid.add (input);
+        grid.add (output);
 
-        var button = new Gtk.Button.with_label ("Click me!");
-        var box = new WattageBox ();
-        box.wattage = 1000;
-
-        grid.add (button);
-        grid.add (box);
-
+        // Add grid to window and show
         main_window.add (grid);
         main_window.show_all ();
     }
