@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Nuke
+GenericName=Nuke
+Comment=Calculates microwave cooking time conversions
+Categories=Utility;
+Exec=com.github.caveware.nuke
+Icon=application-default-icon
+Terminal=false
+Type=Application
+X-GNOME-Gettext-Domain=nuke
+Keywords=Nuke;Cooking;Microwave;

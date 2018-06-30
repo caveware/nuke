@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2018 Caveware Digital <mail@caveware.digital> -->
+<component type="desktop">
+  <id>com.github.caveware.digital.desktop</id>
+  <metadata_license>CC0</metadata_license>
+  <name>Nuke</name>
+  <summary>If you're gonna nuke it, nuke it right</summary>
+  <description>
+    <p>Calculates microwave cooking time conversions.</p>
+  </description>
+  <custom>
+     <value key="x-appcenter-color-primary">#ee5234</value>
+     <value key="x-appcenter-color-primary-text">rgb(0, 0, 0)</value>
+     <value key="x-appcenter-suggested-price">1</value>
+  </custom>
+</component>
