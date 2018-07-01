@@ -51,6 +51,7 @@ PACKAGES
 
 # tell cmake what to call the executable we just made
 add_executable(${EXEC_NAME} ${VALA_C})
+target_link_libraries(${EXEC_NAME} m)
 
 # install the binaries we just made
 install (TARGETS ${EXEC_NAME} RUNTIME DESTINATION bin)
