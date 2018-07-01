@@ -40,6 +40,7 @@ ensure_vala_version("0.16" MINIMUM)
 include(ValaPrecompile)
 vala_precompile(VALA_C ${EXEC_NAME}
     src/Main.vala
+    src/DurationSelector.vala
     src/WattageRow.vala
     src/WattageSelector.vala
 

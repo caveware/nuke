@@ -27,6 +27,10 @@ using Gtk;
  * Entry point for the Nuke microwave cooking time conversion app.
  */
 public class NukeApp : Gtk.Application {
+    private bool change_lock;
+    private WattageRow input;
+    private WattageRow output;
+
     public NukeApp () {
         Object (
             application_id: "com.github.caveware.nuke",
@@ -42,8 +46,15 @@ public class NukeApp : Gtk.Application {
         main_window.title = "Nuke";
 
         // Create wattage rows
-        var input = new WattageRow ("Recommended microwave:", 1000);
-        var output = new WattageRow ("Your microwave:", 700);
+        input = new WattageRow ("Given wattage:", 1000);
+        output = new WattageRow ("Your wattage:", 700);
+
+        // Connect to updates of rows
+        change_lock = false;
+        input.duration_changed.connect (update_output);
+        input.wattage_changed.connect (update_output);
+        output.duration_changed.connect (update_input);
+        output.wattage_changed.connect (update_output);
 
         // Create a new grid with our wattage rows
         var grid = new Gtk.Grid ();
@@ -55,10 +66,34 @@ public class NukeApp : Gtk.Application {
         // Add grid to window and show
         main_window.add (grid);
         main_window.show_all ();
+
+        // Initial state setup
+        input.time = 90;
+    }
+
+    private void update_input () {
+        if (!change_lock) {
+            change_lock = true;
+            input.time = convert (output.wattage, input.wattage, output.time);
+            change_lock = false;
+        }
+    }
+
+    private void update_output () {
+        if (!change_lock) {
+            change_lock = true;
+            output.time = convert (input.wattage, output.wattage, input.time);
+            change_lock = false;
+        }
     }
 
     public static int main (string[] args) {
         var app = new NukeApp ();
         return app.run (args);
+    }
+
+    /** Converts a time from one wattage to another */
+    protected int convert (float from, float to, float time) {
+        return (int)Math.ceil (time * from / to);
     }
 }

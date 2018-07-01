@@ -21,7 +21,7 @@ lin-test:
 # Windows commands
 
 win-build:
-	valac --pkg gtk+-3.0 src/Main.vala src/WattageRow.vala src/WattageSelector.vala -o ./build/Nuke
+	valac --pkg gtk+-3.0 src/Main.vala src/DurationSelector.vala src/WattageRow.vala src/WattageSelector.vala -o ./build/Nuke
 
 win-test:
 	make clean; make win-setup; make win-build; ./build/Nuke

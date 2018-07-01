@@ -6,7 +6,7 @@
 public class WattageSelector : Gtk.ComboBox {
     protected int column_id = 0;
     protected int min_wattage = 300;
-    protected int max_wattage = 1300;
+    protected int max_wattage = 1400;
     protected int step = 25;
 
     /** Constructor */
@@ -27,6 +27,11 @@ public class WattageSelector : Gtk.ComboBox {
 
         // Set the first wattage as active
         set_active (0);
+
+        // Show 5 entries per line, to make popup more manageable
+        set_wrap_width (5);
+
+        expand = false;
     }
 
     /** Controls the wattage */
