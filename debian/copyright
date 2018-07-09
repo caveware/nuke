@@ -2,8 +2,8 @@ Format: http://dep.debian.net/deps/dep5
 Upstream-Name: nuke
 Source: https://github.com/caveware/nuke
 
-Files: src/* data/* cmake/* debian/*
-Copyright: 2018 Josef Frank <josef@caveware.digital>
+Files: src/* data/* debian/*
+Copyright: 2018 Caveware Digital
 License: GPL-3.0+
 
 License: GPL-3.0+

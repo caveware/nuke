@@ -46,8 +46,8 @@ public class NukeApp : Gtk.Application {
         main_window.title = "Nuke";
 
         // Create wattage rows
-        input = new WattageRow ("Given wattage:", 1000);
-        output = new WattageRow ("Your wattage:", 700);
+        input = new WattageRow (_("Given wattage:"), 1000);
+        output = new WattageRow (_("Your wattage:"), 700);
 
         // Connect to updates of rows
         change_lock = false;

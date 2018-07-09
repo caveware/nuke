@@ -1,5 +1,6 @@
-nuke (0.1) precise; urgency=low
+com.github.caveware.nuke (0.1ubuntu1) UNRELEASED; urgency=low
 
-  * Initial Release.
+  [ Josef Frank ]
+  * Initial release
 
- -- Josef Frank <josef@caveware.digital>  Sun, 1 Jul 2018 19:29:00 +1100
+ -- Josef Frank <josef@caveware.digital>  Mon, 09 Jul 2018 23:12:12 +1000

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright 2018 Caveware Digital <mail@caveware.digital> -->
+<!-- Copyright 2018 Josef Frank <josef@caveware.digital> -->
 <component type="desktop">
   <id>com.github.caveware.nuke.desktop</id>
   <metadata_license>CC0</metadata_license>
@@ -8,9 +8,7 @@
   <description>
     <p>Calculates microwave cooking time conversions.</p>
   </description>
-  <custom>
-    <value key="x-appcenter-color-primary">#44aaee</value>
-    <value key="x-appcenter-color-primary-text">#555864</value>
-    <value key="x-appcenter-suggested-price">1</value>
-  </custom>
+  <provides>
+    <binary>com.github.caveware.nuke</binary>
+  </provides>
 </component>

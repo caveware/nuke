@@ -11,5 +11,5 @@ Standards-Version: 3.9.3
 Package: com.github.caveware.nuke
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends}
-Description: Hey young world
- This is a Hello World written in Vala using CMake build system.
+Description: If you're gonna nuke it, nuke it right
+    Microwave cooking time conversion app.

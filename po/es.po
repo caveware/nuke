@@ -1,0 +1,26 @@
+# Spanish translations for com.github.caveware.nuke package.
+# Copyright (C) 2018 THE com.github.caveware.nuke'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the com.github.caveware.nuke package.
+# Automatically generated, 2018.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: com.github.caveware.nuke\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-07-09 23:06+1000\n"
+"PO-Revision-Date: 2018-07-09 22:56+1000\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ASCII\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: src/Main.vala:49
+msgid "Given wattage:"
+msgstr ""
+
+#: src/Main.vala:50
+msgid "Your wattage:"
+msgstr ""
